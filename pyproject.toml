@@ -5,11 +5,42 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "zip-password-recovery"
 version = "0.1.0"
-description = "CLI tool for recovering forgotten ZIP passwords using constrained brute force"
+description = "CLI tool for recovering forgotten ZIP passwords using constrained brute-force methods (authorized use only)."
 readme = "README.md"
 requires-python = ">=3.10"
-license = {text = "MIT"}
-authors = [{name = "Yisak Metaferiya"}]
+license = { text = "MIT" }
+
+authors = [
+  { name = "Yisak Metaferiya" }
+]
+
+keywords = [
+  "zip",
+  "password-recovery",
+  "bruteforce",
+  "security",
+  "cli",
+  "forensics"
+]
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Operating System :: POSIX :: Linux",
+  "License :: OSI Approved :: MIT License",
+  "Intended Audience :: Education",
+  "Intended Audience :: Developers",
+  "Topic :: Security :: Cryptography",
+  "Topic :: Utilities"
+]
+
+dependencies = []
 
 [project.scripts]
 crack_zip = "zip_password_recovery.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
